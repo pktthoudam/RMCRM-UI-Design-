@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+*body{
+    margin: 0;
+    padding: 0;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+.carousel-indicators {
+    background: #610005;
+    margin-bottom: 0rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 5px !important;
+    // height: 40px !important;
+    // bottom: 5px !important;
+}

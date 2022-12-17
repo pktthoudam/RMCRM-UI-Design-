@@ -1,0 +1,134 @@
+@import '../../styles/variable.scss';
+
+.margin {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.img {
+    img {
+        width: 220px;
+        max-width: 100%;
+    }
+}
+.pad{
+    padding: 0;
+    margin:0;
+}
+.heading-title{
+    margin-right: -100px;
+}
+.flex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.flex2{
+    display: flex;
+    justify-items: flex-end !important;
+}
+.nav{
+    justify-content: flex-end !important;
+}
+.nav-item {
+    font-size: 150%;
+    text-align: center;
+    padding: 25px;
+
+    &:hover {
+        background-color: #610005;
+        color: white;
+        cursor: pointer;
+        .dropdown-menu{
+            display: block;
+        }
+    }
+
+}
+
+.active {
+    background-color: #610005;
+    color: white;
+}
+
+
+
+@include ipadpro1 {
+    .heading-title{
+        margin-right: 0px !important;
+    }
+    .menu-icon {
+        margin: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        span {
+            width: 50px;
+            height: 4px;
+            display: block;
+            position: relative;
+            background: black;
+            padding: 1px;
+            margin: 5px;
+            // left: 91%;
+            transition: 0.4s ease-in-out;
+
+        }
+    }
+
+    .show {
+        display: inline-block;
+        background-color: gray;
+        position: relative;
+        top: 9px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .menu-change {
+        span:nth-child(2) {
+            display: none;
+        }
+
+        span:nth-child(1) {
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(3) {
+            transform: rotate(-45deg);
+            margin-top: -9px;
+        }
+    }
+}
+
+//dropdown
+
+//remove arrow icon from dropdown 
+// .dropdown-toggle::after {
+//     content: initial
+// }
+
+li {
+    .dropdown-menu {
+        background-color: #32566c;
+        margin-top: 24px;
+        left: 0;
+        margin-left: 24px;
+    }
+}
+.dropdown-item {
+    color: #fff;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: yellow;
+    background-color: #32566c;
+}
